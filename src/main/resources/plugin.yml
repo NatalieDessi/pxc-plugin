@@ -1,0 +1,10 @@
+name: pxc
+version: '${version}'
+main: de.natalie.pxc.Plugin
+api-version: '1.20'
+commands:
+  command:
+    description: "This is a command"
+    usage: "/command <arg>"
+    aliases: [cmd, command]
+    permission-message: "You do not have permission to use this command"
