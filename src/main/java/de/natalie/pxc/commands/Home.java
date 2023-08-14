@@ -18,11 +18,11 @@ import java.util.function.Consumer;
 import static de.natalie.pxc.utils.HomeUtils.getHomeLocation;
 import static de.natalie.pxc.utils.HomeUtils.getHomes;
 import static de.natalie.pxc.utils.HomeUtils.toHomeLocation;
-import static de.natalie.pxc.utils.MessageUtils.component;
-import static de.natalie.pxc.utils.MessageUtils.send;
-import static de.natalie.pxc.utils.MessageUtils.sendError;
-import static de.natalie.pxc.utils.MessageUtils.sendSuccess;
-import static de.natalie.pxc.utils.MessageUtils.success;
+import static de.natalie.pxc.utils.bukkit.MessageUtils.component;
+import static de.natalie.pxc.utils.bukkit.MessageUtils.send;
+import static de.natalie.pxc.utils.bukkit.MessageUtils.sendError;
+import static de.natalie.pxc.utils.bukkit.MessageUtils.sendSuccess;
+import static de.natalie.pxc.utils.bukkit.MessageUtils.success;
 import static java.util.Optional.ofNullable;
 
 @Log

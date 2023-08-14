@@ -118,7 +118,7 @@ run/
 !gradle-wrapper.jar
 
 # minecraft
-./testserver/*
+testserver/*
 !testserver/paper-1.20.1-124.jar
 !testserver/start.bat
 !testserver/eula.txt

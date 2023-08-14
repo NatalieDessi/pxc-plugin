@@ -1,6 +1,6 @@
 package de.natalie.pxc.commands;
 
-import de.natalie.pxc.utils.BukkitUtils;
+import de.natalie.pxc.utils.bukkit.BukkitUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

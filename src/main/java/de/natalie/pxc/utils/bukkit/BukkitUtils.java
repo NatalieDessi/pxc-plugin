@@ -1,4 +1,4 @@
-package de.natalie.pxc.utils;
+package de.natalie.pxc.utils.bukkit;
 
 import lombok.experimental.UtilityClass;
 import org.bukkit.Bukkit;

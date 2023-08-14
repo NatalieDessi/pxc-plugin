@@ -1,4 +1,4 @@
-package de.natalie.pxc.utils;
+package de.natalie.pxc.utils.bukkit;
 
 import lombok.experimental.UtilityClass;
 import net.kyori.adventure.text.TextComponent;
