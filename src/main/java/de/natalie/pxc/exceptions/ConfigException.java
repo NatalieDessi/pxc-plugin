@@ -1,2 +1,6 @@
-package de.natalie.pxc.exceptions;public class FileException {
-}
+package de.natalie.pxc.exceptions;
+
+import lombok.experimental.StandardException;
+
+@StandardException
+public class ConfigException extends RuntimeException {}

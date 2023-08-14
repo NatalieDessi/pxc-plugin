@@ -116,3 +116,9 @@ run/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+
+# minecraft
+./testserver/*
+!testserver/paper-1.20.1-124.jar
+!testserver/start.bat
+!testserver/eula.txt

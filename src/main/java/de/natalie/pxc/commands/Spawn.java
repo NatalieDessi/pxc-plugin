@@ -8,9 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static net.kyori.adventure.text.Component.text;
 
-public class command implements ICommand {
-
-
+public final class Spawn implements ICommand {
     @Override
     public boolean onCommand(@NotNull final CommandSender sender,
                              @NotNull final Command command,
