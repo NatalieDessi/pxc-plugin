@@ -36,8 +36,8 @@ public final class MaterialUtils {
                                                   MANGROVE_LOG);
 
     @Nullable
-    public static Material getSapling(final Material LOG) {
-        return switch (LOG) {
+    public static Material getSapling(final Material log) {
+        return switch (log) {
             case OAK_LOG -> OAK_SAPLING;
             case DARK_OAK_LOG -> DARK_OAK_SAPLING;
             case BIRCH_LOG -> BIRCH_SAPLING;
