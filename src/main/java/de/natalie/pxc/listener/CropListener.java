@@ -19,7 +19,7 @@ import static org.bukkit.Sound.BLOCK_CROP_BREAK;
 
 public class CropListener implements Listener {
     @EventHandler
-    public static void onInteraction(final PlayerInteractEvent event) {
+    public void onInteraction(final PlayerInteractEvent event) {
         final Block block = event.getClickedBlock();
         if (isNull(block)) {
             return;
