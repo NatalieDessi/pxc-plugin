@@ -4,6 +4,7 @@ import de.natalie.pxc.commands.Home;
 import de.natalie.pxc.commands.ICommand;
 import de.natalie.pxc.commands.Spawn;
 import de.natalie.pxc.listener.CropListener;
+import de.natalie.pxc.listener.SleepListener;
 import de.natalie.pxc.listener.TreeListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +21,8 @@ public final class Plugin extends JavaPlugin {
 
     private final Listener[] listeners = new Listener[]{
             new TreeListener(this),
-            new CropListener()
+            new CropListener(),
+            new SleepListener()
     };
 
     @Override
