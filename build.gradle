@@ -65,12 +65,8 @@ private String getVersion() {
     splitVersion[0]
 }
 
-tasks.register('version') {
-    println(getVersion())
-}
-
-tasks.register('release'){
-    project.version =  getVersion()
+tasks.register('release') {
+    project.version = getVersion()
     dependsOn('assemble')
 }
 

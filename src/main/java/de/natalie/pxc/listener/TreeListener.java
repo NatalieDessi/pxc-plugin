@@ -33,7 +33,7 @@ public class TreeListener implements Listener {
             final Optional<Material> optionalSapling = ofNullable((getSapling(type)));
             optionalSapling.ifPresent(sapling -> {
                 block.setType(sapling);
-                player.playSound(block.getLocation(), Sound.BLOCK_GRASS_PLACE, 1.0f, 1.0f);
+                player.playSound(block.getLocation(), Sound.BLOCK_GRASS_PLACE, 1f, 1f);
                 event.setCancelled(true);
             });
         }
