@@ -1,23 +1,9 @@
 plugins {
     id 'java'
-    id 'maven-publish'
 }
 
 group = 'de.natalie'
 version = '1.1-SNAPSHOT'
-
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/Wavecube/pxc-plugin"
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
 
 repositories {
     mavenCentral()
@@ -52,14 +38,12 @@ java {
     }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        options.release.set(targetJavaVersion)
+tasks.register('buildTestServer') {
+    dependsOn('clean')
+    dependsOn('assemble')
+    jar {
+        destinationDirectory.set(file("$rootDir/testserver/plugins"))
     }
-}
-
-jar {
-    destinationDirectory.set(file("$rootDir/testserver/plugins"))
 }
 
 processResources {
@@ -71,5 +55,27 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+private String getVersion() {
+    final String[] splitVersion = project.version.toString().split("-")
+    assert splitVersion.length == 2, "The version has the wrong format! The version should be in the format of 'x.x-SNAPSHOT'"
+    assert splitVersion[1].toString().contains('SNAPSHOT'), "The version has no SNAPSHOT suffix!"
+    splitVersion[0]
+}
+
+tasks.register('version') {
+    println(getVersion())
+}
+
+tasks.register('release'){
+    project.version =  getVersion()
+    dependsOn('assemble')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        options.release.set(targetJavaVersion)
     }
 }
