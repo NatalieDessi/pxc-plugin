@@ -1,8 +1,10 @@
 package de.natalie.pxc;
 
+import de.natalie.pxc.commands.Color;
 import de.natalie.pxc.commands.Home;
 import de.natalie.pxc.commands.ICommand;
 import de.natalie.pxc.commands.Spawn;
+import de.natalie.pxc.listener.ColorListener;
 import de.natalie.pxc.listener.CropListener;
 import de.natalie.pxc.listener.SleepListener;
 import de.natalie.pxc.listener.TreeListener;
@@ -16,13 +18,15 @@ import static org.bukkit.Bukkit.getPluginManager;
 public final class Plugin extends JavaPlugin {
     private static final ICommand[] commands = new ICommand[]{
             new Spawn(),
-            new Home()
+            new Home(),
+            new Color()
     };
 
     private final Listener[] listeners = new Listener[]{
             new TreeListener(this),
             new CropListener(),
-            new SleepListener()
+            new SleepListener(),
+            new ColorListener()
     };
 
     @Override
