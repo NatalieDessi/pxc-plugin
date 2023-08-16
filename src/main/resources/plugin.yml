@@ -8,10 +8,12 @@ commands:
   spawn:
     description: Teleports the current player to the spawn
   home:
-    usage: "/home [set | get]"
-    description: Sets a home or teleports the player to it's home. [/home get, /home set, /home]
+    usage: "§3/home [set, get]"
+    description: Sets a home or teleports the player to it's home.
+  color:
+    usage: "§3/color [set r g b]"
+    description: Sets a player color or displays the color
 
 libraries:
-  - com.fasterxml.jackson.core:jackson-core:${jacksonVersion}
   - com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}
 
